@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-body-gradient: linear-gradient(180deg, #030712 0%, #090d1f 100%);
+  --text-primary: #f1f5f9;
+  --glass-bg: rgba(15, 23, 42, 0.3);
+  --glass-border: rgba(168, 85, 247, 0.15);
+  --neon-border-color: rgba(168, 85, 247, 0.3);
+  --neon-shadow: 0 0 10px rgba(168, 85, 247, 0.1);
+  --theme-glow: #a855f7;
+}
+
+.light-theme {
+  --bg-body-gradient: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  --text-primary: #0f172a;
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(168, 85, 247, 0.25);
+  --neon-border-color: rgba(168, 85, 247, 0.4);
+  --neon-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --theme-glow: #7c3aed;
+}
+
+@layer base {
+  body {
+    @apply m-0 min-h-screen font-inter antialiased transition-all duration-300;
+    background: var(--bg-body-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+  }
+}
+
+@layer utilities {
+  .font-orbitron { font-family: 'Orbitron', sans-serif; }
+  .font-rajdhani { font-family: 'Rajdhani', sans-serif; }
+  .font-tech { font-family: 'Share Tech Mono', monospace; }
+  .font-inter { font-family: 'Inter', sans-serif; }
+
+  .glass-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .neon-border {
+    border: 1px solid var(--neon-border-color);
+    box-shadow: var(--neon-shadow);
+    transition: all 0.3s ease;
+  }
+  
+  .neon-border:focus, .neon-border:focus-within {
+    border-color: var(--theme-glow);
+    box-shadow: 0 0 15px var(--theme-glow);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px var(--theme-glow);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.2); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.5); 
+}
+
+/* Input Styles Overrides */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(240deg);
+}
+
+/* Blinking dot animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ==========================================================================
+   LEGENDARY LIGHT THEME OVERRIDES FOR CYBERPUNK ACADEMIC STYLE
+   ========================================================================== */
+.light-theme .text-cyan-50, 
+.light-theme .text-cyan-100, 
+.light-theme .text-cyan-200, 
+.light-theme .text-cyan-300, 
+.light-theme .text-white {
+  color: #0f172a !important;
+}
+
+.light-theme .text-cyan-400,
+.light-theme .text-purple-400,
+.light-theme .text-purple-300,
+.light-theme .text-cyan-300 {
+  color: #7c3aed !important; /* Premium violet-600 */
+}
+
+.light-theme .text-cyan-600,
+.light-theme .text-cyan-500\/70,
+.light-theme .text-cyan-200\/70,
+.light-theme .text-purple-400\/80 {
+  color: #4f46e5 !important; /* Indigo-600 */
+}
+
+.light-theme .bg-slate-950\/60,
+.light-theme .bg-slate-950\/50,
+.light-theme .bg-slate-950\/40,
+.light-theme .bg-black\/40,
+.light-theme .bg-black\/50,
+.light-theme .bg-gray-900\/50,
+.light-theme .bg-gray-900\/80,
+.light-theme .bg-gray-900\/60,
+.light-theme .bg-slate-950 {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(124, 58, 237, 0.2) !important;
+  color: #0f172a !important;
+}
+
+.light-theme .border-cyan-500\/30,
+.light-theme .border-cyan-500\/20,
+.light-theme .border-cyan-500\/10,
+.light-theme .border-purple-500\/20,
+.light-theme .border-purple-500\/30 {
+  border-color: rgba(124, 58, 237, 0.25) !important;
+}
+
+.light-theme input, 
+.light-theme select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(124, 58, 237, 0.3) !important;
+}
+
+.light-theme input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.light-theme .font-tech,
+.light-theme .font-orbitron,
+.light-theme .font-rajdhani {
+  color: #1e1b4b !important; /* Deep Navy Indigo */
+}
+
+.light-theme .text-cyan-400\/70,
+.light-theme .text-purple-400\/70 {
+  color: #6d28d9 !important;
+}
+
+.light-theme .bg-cyan-950\/20,
+.light-theme .bg-purple-900\/20,
+.light-theme .bg-red-500\/10,
+.light-theme .bg-green-500\/10,
+.light-theme .bg-emerald-500\/5,
+.light-theme .bg-red-500\/5,
+.light-theme .bg-orange-500\/5,
+.light-theme .bg-blue-500\/5 {
+  background-color: rgba(124, 58, 237, 0.05) !important;
+  border-color: rgba(124, 58, 237, 0.2) !important;
+}
+
+.light-theme .text-emerald-400,
+.light-theme .text-green-400 {
+  color: #059669 !important; /* emerald-600 */
+}
+
+.light-theme .text-red-400 {
+  color: #dc2626 !important; /* red-600 */
+}
+
+.light-theme .text-orange-400 {
+  color: #ea580c !important; /* orange-600 */
+}
+
+.light-theme .text-blue-400 {
+  color: #2563eb !important; /* blue-600 */
+}
+
+.light-theme .text-cyan-100 {
+  color: #1e1b4b !important;
+}
+
+.light-theme input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: none !important;
+}
+
+/* Custom styles for Leaflet overrides under light theme */
+.light-theme .leaflet-container {
+  background-color: #f1f5f9 !important;
+}

@@ -1,0 +1,21 @@
+[
+  {"value": "DEL", "label": "Delhi Indira Gandhi (DEL)"},
+  {"value": "BOM", "label": "Mumbai Chhatrapati Shivaji (BOM)"},
+  {"value": "BLR", "label": "Bangalore Kempegowda (BLR)"},
+  {"value": "HYD", "label": "Hyderabad Rajiv Gandhi (HYD)"},
+  {"value": "MAA", "label": "Chennai International (MAA)"},
+  {"value": "CCU", "label": "Kolkata Netaji Subhash (CCU)"},
+  {"value": "COK", "label": "Cochin International (COK)"},
+  {"value": "AMD", "label": "Ahmedabad Sardar Patel (AMD)"},
+  {"value": "PNQ", "label": "Pune Airport (PNQ)"},
+  {"value": "GOI", "label": "Goa Dabolim (GOI)"},
+  {"value": "SXR", "label": "Srinagar Airport (SXR)"},
+  {"value": "JAI", "label": "Jaipur International (JAI)"},
+  {"value": "LKO", "label": "Lucknow Chaudhary Charan (LKO)"},
+  {"value": "GAU", "label": "Guwahati Lokpriya Gopinath (GAU)"},
+  {"value": "ATQ", "label": "Amritsar Sri Guru Ram (ATQ)"},
+  {"value": "PAT", "label": "Patna Jayprakash Narayan (PAT)"},
+  {"value": "BBI", "label": "Bhubaneswar Biju Patnaik (BBI)"},
+  {"value": "VTZ", "label": "Visakhapatnam Airport (VTZ)"},
+  {"value": "CJB", "label": "Coimbatore International (CJB)"}
+]

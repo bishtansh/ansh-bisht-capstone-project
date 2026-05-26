@@ -1,0 +1,33 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+flightproject/venv/
+flightproject/staticfiles/
+
+# Node modules & build outputs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+flightproject/frontend/node_modules/
+flightproject/frontend/build/
+flightproject/frontend/dist/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Databases & local configs
+*.sqlite3
+.env
+.DS_Store
+Thumbs.db
+.gemini/
+
+# Large Datasets
+*.csv
+flightproject/backend/ml_model/flights.csv

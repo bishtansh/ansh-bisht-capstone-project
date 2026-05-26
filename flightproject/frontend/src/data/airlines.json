@@ -1,0 +1,8 @@
+[
+  {"value": "IGO", "label": "IndiGo"},
+  {"value": "AIC", "label": "Air India"},
+  {"value": "VTI", "label": "Vistara"},
+  {"value": "SEJ", "label": "SpiceJet"},
+  {"value": "LLR", "label": "Air India Express"},
+  {"value": "AKJ", "label": "Akasa Air"}
+]
