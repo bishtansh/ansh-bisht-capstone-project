@@ -7,6 +7,7 @@ import { Plane, AlertTriangle, ShieldCheck, Map as MapIcon, Loader2, Play, Circl
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import airportsData from "../data/airports.json";
+import { API_BASE_URL } from "../services/api";
 
 // Fix for default marker icons in react-leaflet
 delete L.Icon.Default.prototype._getIconUrl;
@@ -84,7 +85,7 @@ const LiveRadar = () => {
 
   const fetchFlights = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/live-flights/');
+      const response = await axios.get(`${API_BASE_URL}/api/live-flights/`);
       if (response.data.flights) {
         setFlights(response.data.flights);
       }

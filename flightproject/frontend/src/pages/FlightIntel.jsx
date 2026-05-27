@@ -4,6 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsToolti
 import { ArrowLeft, Activity, Compass, Wind, AlertTriangle, ShieldCheck, Clock, Plane } from 'lucide-react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { API_BASE_URL } from '../services/api';
 
 const FlightIntel = () => {
   const { callsign } = useParams();
@@ -15,7 +16,7 @@ const FlightIntel = () => {
   useEffect(() => {
     const fetchIntel = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/predict/flight-intel/${callsign}/`);
+        const response = await axios.get(`${API_BASE_URL}/predict/flight-intel/${callsign}/`);
         setIntel(response.data);
       } catch (err) {
         setError('Failed to retrieve telemetry data.');

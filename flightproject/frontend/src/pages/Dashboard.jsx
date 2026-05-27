@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { Activity, Target, AlertCircle, CheckCircle, Radio, Plane, Loader2 } from "lucide-react";
 import axios from "axios";
+import { API_BASE_URL } from "../services/api";
 
 const predictionData = [
   { name: "Mon", onTime: 12, delayed: 4 },
@@ -29,7 +30,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchLiveFlights = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/api/live-flights/");
+        const response = await axios.get(`${API_BASE_URL}/api/live-flights/`);
         if (response.data && response.data.flights) {
           setLiveFlights(response.data.flights);
         }

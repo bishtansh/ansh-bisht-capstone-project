@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import airportsData from "../data/airports.json";
 import airlinesData from "../data/airlines.json";
+import { API_BASE_URL } from "../services/api";
 
 // Custom styles for react-select to match cyberpunk/light theme
 const selectStyles = {
@@ -206,7 +207,7 @@ function PredictionForm() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/predict/",
+        `${API_BASE_URL}/api/predict/`,
         payload
       );
 

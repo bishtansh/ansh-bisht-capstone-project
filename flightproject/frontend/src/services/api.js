@@ -1,14 +1,16 @@
 import axios from "axios";
 
+export const API_BASE_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000/api/",
+  baseURL: `${API_BASE_URL}/api/`,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
 export const predictDelay = async (data) => {
-    const response = await fetch("http://127.0.0.1:8000/api/predict/", {
+    const response = await fetch(`${API_BASE_URL}/api/predict/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -22,4 +24,5 @@ export const predictDelay = async (data) => {
   
     return response.json();
   };
+
   
